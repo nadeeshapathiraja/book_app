@@ -18,16 +18,42 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            UserAccountsDrawerHeader(
-              accountName: const Text('Sarasi Bookshop'),
-              accountEmail: const Text("sarasibookstore@gmail.com"),
-              currentAccountPicture: Image.asset(
-                Constants.imageAssets("logo.png"),
-                width: 400,
+            Container(
+              height: 200,
+              color: primaryColor,
+              child: Column(
+                children: [
+                  Container(
+                    width: 120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(300),
+                      color: kWhite,
+                    ),
+                    child: Image.asset(
+                      Constants.imageAssets("logo.png"),
+                      width: 100,
+                    ),
+                  ),
+                  const CustomText(
+                    text: "Sarasi Bookshop",
+                    color: kWhite,
+                    fontsize: 20,
+                  ),
+                  const CustomText(
+                    text: "sarasibookstore@gmail.com",
+                    color: kWhite,
+                    fontsize: 15,
+                  )
+                ],
               ),
             ),
             ListTile(
-              title: const Text("Home"),
+              title: const CustomText(
+                text: "Homes",
+                color: kBlack,
+                fontsize: 20,
+                fontweight: FontWeight.w900,
+              ),
               onTap: () {},
               leading: const Icon(
                 Icons.home,
@@ -36,7 +62,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ListTile(
-              title: const Text("All Books"),
+              title: const CustomText(
+                text: "Books",
+                color: kBlack,
+                fontsize: 20,
+                fontweight: FontWeight.w900,
+              ),
               onTap: () {},
               leading: const Icon(
                 Icons.menu_book,
@@ -47,6 +78,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               title: const CustomText(
                 text: "Drawing tools",
+                color: kBlack,
+                fontsize: 20,
+                fontweight: FontWeight.w900,
               ),
               onTap: () {},
               leading: const Icon(
@@ -56,7 +90,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ListTile(
-              title: const Text("Stationaries"),
+              title: const CustomText(
+                text: "Stationaries",
+                color: kBlack,
+                fontsize: 20,
+                fontweight: FontWeight.w900,
+              ),
               onTap: () {},
               leading: const Icon(
                 Icons.local_printshop,
@@ -65,7 +104,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ListTile(
-              title: const Text("Sport Items"),
+              title: const CustomText(
+                text: "Sport Items",
+                color: kBlack,
+                fontsize: 20,
+                fontweight: FontWeight.w900,
+              ),
               onTap: () {},
               leading: const Icon(
                 Icons.sports_soccer,
