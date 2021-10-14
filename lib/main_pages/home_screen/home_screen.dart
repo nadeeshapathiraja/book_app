@@ -1,3 +1,4 @@
+import 'package:book_app/components/custom_list_tile.dart';
 import 'package:book_app/components/custom_text.dart';
 import 'package:book_app/utils/app_colors.dart';
 import 'package:book_app/utils/constants.dart';
@@ -47,33 +48,38 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            ListTile(
-              title: const CustomText(
-                text: "Home",
-                color: kBlack,
-                fontsize: 20,
-                fontweight: FontWeight.w900,
-              ),
-              onTap: () {},
-              leading: const Icon(
+            CustomListTile(
+              textVal: "Home",
+              ontap: () {},
+              iconName: const Icon(
                 Icons.home,
                 size: 30.0,
                 color: primaryColor,
               ),
             ),
-            ListTile(
-              title: const CustomText(
+            ExpansionTile(
+              title: CustomText(
                 text: "Books",
                 color: kBlack,
                 fontsize: 20,
                 fontweight: FontWeight.w900,
               ),
-              onTap: () {},
               leading: const Icon(
                 Icons.menu_book,
                 size: 30.0,
                 color: primaryColor,
               ),
+              children: [
+                ListTile(
+                  title: const CustomText(
+                    text: "English Books",
+                    color: kBlack,
+                    fontsize: 20,
+                    fontweight: FontWeight.w900,
+                  ),
+                  onTap: () {},
+                ),
+              ],
             ),
             ListTile(
               title: const CustomText(
