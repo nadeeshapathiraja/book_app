@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               title: const CustomText(
-                text: "Homes",
+                text: "Home",
                 color: kBlack,
                 fontsize: 20,
                 fontweight: FontWeight.w900,
@@ -113,6 +113,20 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {},
               leading: const Icon(
                 Icons.sports_soccer,
+                size: 30.0,
+                color: primaryColor,
+              ),
+            ),
+            ListTile(
+              title: const CustomText(
+                text: "Contact Us",
+                color: kBlack,
+                fontsize: 20,
+                fontweight: FontWeight.w900,
+              ),
+              onTap: () {},
+              leading: const Icon(
+                Icons.contact_mail,
                 size: 30.0,
                 color: primaryColor,
               ),
