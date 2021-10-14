@@ -1,3 +1,4 @@
+import 'package:book_app/components/custom_text.dart';
 import 'package:book_app/utils/app_colors.dart';
 import 'package:book_app/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -44,13 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ListTile(
-              title: const Text(
-                "Drawing tools",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w900,
-                  color: kBlack,
-                ),
+              title: const CustomText(
+                text: "Drawing tools",
               ),
               onTap: () {},
               leading: const Icon(
